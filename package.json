@@ -1,0 +1,55 @@
+{
+  "name": "rest-buddy",
+  "version": "0.2.0",
+  "description": "Resourceful Framework that's got your back",
+  "main": "dist/rest-buddy.js",
+  "scripts": {
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "test": "./node_modules/gulp/bin/gulp.js test",
+    "build": "./node_modules/gulp/bin/gulp.js test build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/home-buddy/rest-buddy.git"
+  },
+  "keywords": [
+    "rest",
+    "express",
+    "resource",
+    "api"
+  ],
+  "author": "spaintrain <mcspainhower+npm@gmail.com>",
+  "license": "bsd-3-clause",
+  "bugs": {
+    "url": "https://github.com/home-buddy/rest-buddy/issues"
+  },
+  "homepage": "https://github.com/home-buddy/rest-buddy#readme",
+  "dependencies": {
+    "babel-runtime": "^5.6.15",
+    "express": "^4.13.1",
+    "express-jsonschema": "^1.1.0",
+    "jsonschema": "^1.0.1",
+    "ls-lodash": "^2.2.3",
+    "pluralize": "^1.1.2",
+    "source-map-support": "^0.3.2"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-eslint": "^3.1.23",
+    "babel-loader": "^5.3.1",
+    "chai": "^3.0.0",
+    "del": "^1.2.0",
+    "eslint": "^0.24.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-mocha": "^2.1.2",
+    "gulp-util": "^3.0.6",
+    "json-loader": "^0.5.2",
+    "node-libs-browser": "^0.5.2",
+    "q": "^1.4.1",
+    "supertest": "^1.0.1",
+    "supertest-as-promised": "^2.0.2",
+    "webpack": "^1.10.1"
+  }
+}
