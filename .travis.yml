@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.12'
+- '0.10'
+deploy:
+  provider: npm
+  email: mc.s.pain.how.er+npm@gmail.com
+  api_key:
+    secure: "PfI6NxWCjtqe0PnBPHsqzK3J1I2Vt6vKVPCbB8rQFd/RRIjDbaoOOlMEhsLbBRBd4T9+ciF3Z0q1dlSEMz9IlYyzzKFZtIAJ5WzVqyMCj6fDirOOubWPegkOoGgYtWs+Sqcnc7NfTQYGNfzNh80c83xExdd6g2rxhM9kWF+FLG/8kZAtRm6FUAe8x07zQfhXGO9nzVpOwZMeFW704thE21mWimo4htsSacM4SGZ9S8ybgWTLlcWVRWnym1N+EQGT9DBNOvzYSqHJgZGIZPc6wxQRx/r4V/z9qdPV/wXKZJ1G9dfCrAL76VzJOmQvxWJPANHr7+lSgn7dPhx0QQNxbEwQIMhNebLYs9pgPguRH7BuHnQZxEL3VNmrlssZrKOem4QqeFi0mKKaVE0ectlcaCo4J+QicrHCmtcZ+HlIOlP/yZ16+sjDpxO/Sll1ciJETtTbLul29Zqgz99E/JItNeQPEWnBC6oM3xCJ4fZMyKo0beYJzvM/JV/7x+RnFZ5CwHWwZru/woR8pYHoKSLbuC9sxczQjkIBcXCKLy2Z06BMuoLWp73DMpQiyvAEUuQHUsb36KoUquxV+n1BmJDpYErc+9axfq38rp2K3lv0XGfVVeQ8QCzD6sJDYsi7jXW0ZPVyynt+d3t9pbx8I9KdO8Brp6Pbv7gFW5wmojSghLQ="
+  on:
+    tags: true
+    all_branches: true
+    repo: home-buddy/rest-buddy

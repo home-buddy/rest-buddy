@@ -1,0 +1,9 @@
+/.git/
+/lib/
+/test/
+/.eslint
+/.gitignore
+/.travis.yml
+/circle.yml
+/gulpfile.js
+/webpack.config.js
