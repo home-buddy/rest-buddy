@@ -1,6 +1,6 @@
 {
   "name": "rest-buddy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Resourceful Framework that's got your back",
   "main": "dist/rest-buddy.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "api"
   ],
   "author": "spaintrain <mcspainhower+npm@gmail.com>",
-  "license": "bsd-3-clause",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/home-buddy/rest-buddy/issues"
   },
