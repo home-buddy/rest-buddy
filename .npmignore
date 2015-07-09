@@ -1,7 +1,7 @@
 /.git/
 /lib/
 /test/
-/.eslint
+/.eslintrc
 /.gitignore
 /.travis.yml
 /circle.yml

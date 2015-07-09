@@ -25,7 +25,8 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'rest-buddy.js'
+        filename: 'rest-buddy.js',
+        libraryTarget: 'commonjs2'
     },
     externals: nodeModules,
     plugins: [
