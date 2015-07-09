@@ -12,6 +12,8 @@ var q = require('q'),
     gutil = require('gulp-util'),
     eslint = require('gulp-eslint'),
     mocha = require('gulp-mocha'),
+    rename = require('gulp-rename'),
+    jsdoc2md = require('gulp-jsdoc-to-markdown'),
 
     webpackConfig = require('./webpack.config.js'),
     buildDir = path.resolve(__dirname, 'dist'),
@@ -36,7 +38,8 @@ gulp.task('test', [
 ]);
 
 gulp.task('build', [
-    'webpack'
+    'webpack',
+    'docs'
 ]);
 
 gulp.task('watch', function() {
@@ -60,7 +63,10 @@ gulp.task('mocha', ['build'], function() {
 
 gulp.task('clean', _.once(function() {
     gutil.log('[clean]', 'First and ONLY run.');
-    return q.nfcall(del, [path.join(buildDir, '**')]);
+    return q.all([
+        q.nfcall(del, [path.join(buildDir, '**')]),
+        q.nfcall(del, [path.join('docs', 'api', '**')])
+    ]);
 }));
 
 gulp.task('webpack', ['clean'], function() {
@@ -70,4 +76,14 @@ gulp.task('webpack', ['clean'], function() {
         .fail(function(err) {
             throw new gutil.PluginError(taskName, err);
         });
+});
+
+gulp.task('docs', function(){
+    return gulp.src('lib/index.js')
+        .pipe(jsdoc2md())
+        .on('error', function(err){
+            gutil.log(gutil.colors.red('[jsdoc2md] failed'), err.message);
+        })
+        .pipe(rename({ extname: '.md' }))
+        .pipe(gulp.dest('./docs/api'));
 });
