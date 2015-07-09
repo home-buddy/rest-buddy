@@ -14,31 +14,40 @@ describe('embellishSpec', function() {
         });
 
         it('show', function() {
-            var newSpec = embellishSpec('cars', {}, {index: _.noop});
+            var newSpec = embellishSpec('cars', {}, {show: _.noop});
             expect(newSpec).to.have.property('show');
             expect(newSpec).to.have.deep.property('show.method', 'GET');
             expect(newSpec).to.have.deep.property('show.url', ':car');
         });
 
         it('create', function() {
-            var newSpec = embellishSpec('cars', {}, {index: _.noop});
+            var newSpec = embellishSpec('cars', {}, {create: _.noop});
             expect(newSpec).to.have.property('create');
             expect(newSpec).to.have.deep.property('create.method', 'POST');
             expect(newSpec).to.have.deep.property('create.url', '');
         });
 
         it('update', function() {
-            var newSpec = embellishSpec('cars', {}, {index: _.noop});
+            var newSpec = embellishSpec('cars', {}, {update: _.noop});
             expect(newSpec).to.have.property('update');
             expect(newSpec).to.have.deep.property('update.method', 'PUT');
             expect(newSpec).to.have.deep.property('update.url', ':car');
         });
 
         it('destroy', function() {
-            var newSpec = embellishSpec('cars', {}, {index: _.noop});
+            var newSpec = embellishSpec('cars', {}, {destroy: _.noop});
             expect(newSpec).to.have.property('destroy');
             expect(newSpec).to.have.deep.property('destroy.method', 'DELETE');
             expect(newSpec).to.have.deep.property('destroy.url', ':car');
         });
+    });
+
+    it('does not add actions absent from controller', function() {
+        var newSpec = embellishSpec('cars', {}, {index: _.noop});
+        expect(newSpec).to.have.property('index');
+        expect(newSpec).to.not.have.property('show');
+        expect(newSpec).to.not.have.property('create');
+        expect(newSpec).to.not.have.property('update');
+        expect(newSpec).to.not.have.property('delete');
     });
 });
