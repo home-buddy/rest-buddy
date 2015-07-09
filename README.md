@@ -1,4 +1,4 @@
-# rest-buddy [![Build Status](https://travis-ci.org/home-buddy/rest-buddy.svg)](https://travis-ci.org/home-buddy/rest-buddy) [![Circle CI](https://circleci.com/gh/home-buddy/rest-buddy.svg?style=shield)](https://circleci.com/gh/home-buddy/rest-buddy)
+# rest-buddy [![Build Status](https://travis-ci.org/home-buddy/rest-buddy.svg)](https://travis-ci.org/home-buddy/rest-buddy) [![Circle CI](https://circleci.com/gh/home-buddy/rest-buddy.svg?style=shield)](https://circleci.com/gh/home-buddy/rest-buddy) [![npm](https://img.shields.io/npm/v/rest-buddy.svg)](https://www.npmjs.com/package/rest-buddy) [![npm](https://img.shields.io/npm/l/rest-buddy.svg)](https://github.com/home-buddy/rest-buddy/blob/master/LICENSE)
 
 Resourceful Framework that's got your back
 
