@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "rest-buddy \n \n \n \nsect;\n\n\nResourceful Framework that\ns got your back\n\n\nOverview\nsect;\n\n\nRestBuddy is a light framework for creating JSON RESTy APIs.  Currently it provides a middleware for Express, but could also provide one for Koa in the future.  The overall design goals are:\n\n\n\n\nStrong validation of request body, request parameters, and response body\n\n\nFast and easy to create standard REST endpoints, but not overly restrictive\n\n\nAbility to procedurally generate documentation (perhaps in the future via Swagger)\n\n\nEasily testable controller action handlers\n\n\nStandard middleware that can be composed with other middleware in the standard fashion\n\n\n\n\nRestBuddy is an instantiatable class that takes in it constructor\n\n\n\n\nThe resource name\n\n\nA specification for actions (action name, method, url, validation schemas, human readable info)\n\n\nA controller that exports action handlers\n\n\n\n\nand provides getters for\n\n\n\n\nExpress middleware that serves the resource\n\n\nThe decorated specification (that includes generated REST actions)\n\n\n(future) Human readable documentation in markdown\n\n\n(future) Koa middleware that serves the resource\n\n\n\n\nUsage\nsect;\n\n\nIdiomatic REST with no validations\nsect;\n\n\nA completely idiomtic REST endpoint (with no validation) would look like:\n\n\nvar app = require('express')(),\n    RestBuddy = require('rest-buddy'),\n\n    spec = {}, // RestBuddy autofills this for standard REST actions\n    controller = {\n        index:   function(req) { return {status: 200, data: {'ok'}}; },\n        create:  function(req) { return {status: 200, data: {'ok'}}; },\n        show:    function(req) { return {status: 200, data: {'ok'}}; },\n        update:  function(req) { return {status: 200, data: {'ok'}}; },\n        destroy: function(req) { return {status: 200, data: {'ok'}}; }\n    },\n\n    smurfsResource = new RestBuddy('smurfs', spec, controllers);\n\napp.use(smurfsResource.middleware).listen(1337);\n\n\n\n\nWe can now use the following methods on the following URLs\n\n\nGET    /smurfs    =\n 200 'ok'\nPOST   /smurfs    =\n 200 'ok'\nGET    /smurfs/42 =\n 200 'ok'\nPUT    /smurfs/42 =\n 200 'ok'\nDELETE /smurfs/42 =\n 200 'ok'\n\n\n\n\nIdiomatic REST with validations\nsect;\n\n\nLorem\n\n\nREST + custom actions\nsect;\n\n\nLorem\n\n\nComponents\nsect;\n\n\nRestBuddy\nsect;\n\n\nLorem\n\n\nSpecification\nsect;\n\n\nLorem\n\n\nController\nsect;\n\n\nLorem\n\n\nDevelopment\nsect;\n\n\nClone and install deps\n\n\nnpm i  \n\n\n\n\nYou can run tests one time\n\n\nnpm tst\n\n\n\n\nOr you can run tests on changes\n\n\nnpm start\n\n\n\n\nBuild the final compiled lib with\n\n\nnpm run build", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#rest-buddy", 
+            "text": "Resourceful Framework that s got your back", 
+            "title": "rest-buddy"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "RestBuddy is a light framework for creating JSON RESTy APIs.  Currently it provides a middleware for Express, but could also provide one for Koa in the future.  The overall design goals are:   Strong validation of request body, request parameters, and response body  Fast and easy to create standard REST endpoints, but not overly restrictive  Ability to procedurally generate documentation (perhaps in the future via Swagger)  Easily testable controller action handlers  Standard middleware that can be composed with other middleware in the standard fashion   RestBuddy is an instantiatable class that takes in it constructor   The resource name  A specification for actions (action name, method, url, validation schemas, human readable info)  A controller that exports action handlers   and provides getters for   Express middleware that serves the resource  The decorated specification (that includes generated REST actions)  (future) Human readable documentation in markdown  (future) Koa middleware that serves the resource", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "Idiomatic REST with no validations sect;  A completely idiomtic REST endpoint (with no validation) would look like:  var app = require('express')(),\n    RestBuddy = require('rest-buddy'),\n\n    spec = {}, // RestBuddy autofills this for standard REST actions\n    controller = {\n        index:   function(req) { return {status: 200, data: {'ok'}}; },\n        create:  function(req) { return {status: 200, data: {'ok'}}; },\n        show:    function(req) { return {status: 200, data: {'ok'}}; },\n        update:  function(req) { return {status: 200, data: {'ok'}}; },\n        destroy: function(req) { return {status: 200, data: {'ok'}}; }\n    },\n\n    smurfsResource = new RestBuddy('smurfs', spec, controllers);\n\napp.use(smurfsResource.middleware).listen(1337);  We can now use the following methods on the following URLs  GET    /smurfs    =  200 'ok'\nPOST   /smurfs    =  200 'ok'\nGET    /smurfs/42 =  200 'ok'\nPUT    /smurfs/42 =  200 'ok'\nDELETE /smurfs/42 =  200 'ok'  Idiomatic REST with validations sect;  Lorem  REST + custom actions sect;  Lorem", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#components", 
+            "text": "RestBuddy sect;  Lorem  Specification sect;  Lorem  Controller sect;  Lorem", 
+            "title": "Components"
+        }, 
+        {
+            "location": "/#development", 
+            "text": "Clone and install deps  npm i    You can run tests one time  npm tst  Or you can run tests on changes  npm start  Build the final compiled lib with  npm run build", 
+            "title": "Development"
+        }, 
+        {
+            "location": "/user-guide/", 
+            "text": "", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/api/", 
+            "text": "RestBuddy\nsect;\n\n\nKind\n: global class  \n\n\n\n\nRestBuddy\n\n\nnew RestBuddy(name, spec, controller)\n\n\n.middleware\n\n\n.spec\n\n\n\n\n\n\nnew RestBuddy(name, spec, controller)\nsect;\n\n\nCreate a RestBuddy instance\n\n\n\n\n\n\n\n\nParam\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nname\n\n\nstring\n\n\nName of this resource (e.g., \nsmurfs\n)\n\n\n\n\n\n\nspec\n\n\nobject\n\n\nSpecification object\n\n\n\n\n\n\ncontroller\n\n\nobject\n\n\nMap of the actions to action handler functions\n\n\n\n\n\n\n\n\n\n\nrestBuddy.middleware\nsect;\n\n\nGet the express middleware for serving this resource\n\n\nKind\n: instance property of \nRestBuddy\n\n\nRead only\n: true\n\n\n\n\nrestBuddy.spec\nsect;\n\n\nGet the resource specification, including added REST actions\n\n\nKind\n: instance property of \nRestBuddy\n\n\nRead only\n: true", 
+            "title": "API"
+        }, 
+        {
+            "location": "/api/#restbuddy", 
+            "text": "Kind : global class     RestBuddy  new RestBuddy(name, spec, controller)  .middleware  .spec    new RestBuddy(name, spec, controller) sect;  Create a RestBuddy instance     Param  Type  Description      name  string  Name of this resource (e.g.,  smurfs )    spec  object  Specification object    controller  object  Map of the actions to action handler functions      restBuddy.middleware sect;  Get the express middleware for serving this resource  Kind : instance property of  RestBuddy  Read only : true   restBuddy.spec sect;  Get the resource specification, including added REST actions  Kind : instance property of  RestBuddy  Read only : true", 
+            "title": "RestBuddy"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "", 
+            "title": "About"
+        }
+    ]
+}
