@@ -1,0 +1,26 @@
+site_name: RestBuddy
+site_description: JSON RESTy API framework that's got your back
+site_author: HomeBuddy
+
+repo_url: https://github.com/home-buddy/rest-buddy
+
+pages:
+- Home: index.md
+- User Guide: user-guide/index.md
+- API: api/index.md
+- About: about/index.md
+
+theme: readthedocs
+
+markdown_extensions:
+  - toc:
+      permalink: '&sect;'
+  - admonition
+  - smarty
+  - sane_lists
+  - extra
+
+copyright: Copyright &copy; 2015 <a href="https://github.com/home-buddy">HomeBuddy</a>
+google_analytics: ['id', 'domain']
+
+strict: true

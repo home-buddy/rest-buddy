@@ -67,7 +67,7 @@ Lorem
 
 Lorem
 
-## API
+## Components
 
 ### RestBuddy
 
