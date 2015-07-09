@@ -1,6 +1,6 @@
 {
   "name": "rest-buddy",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Resourceful Framework that's got your back",
   "main": "dist/rest-buddy.js",
   "scripts": {

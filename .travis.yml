@@ -8,6 +8,7 @@ deploy:
   api_key:
     secure: L/QS9TM0cxvJk7sDew/dANuAVTnrLmoLjf7tR92pmoDlE/pICzJ1asZtxjz8UezRInQHmXlRvTizlk2gGpmb6DYul7tv66w/k4/9OrUYMWGZ5wh+A78knGGreA3U9FQXuvyL+01aZi2uZxbJiZRhzfUfnvUawx5QmGhRDCmCeqM9vqicU83zMDlSHodV/gxg0b73bgHzoo0KzN5q56nvhBRgLku5ojB1PyUFrQV6q9IggThGAtNGUHfClPDY58KB/3WQHi6GmNVNKkvb7HNmncUPIYlJIVCXsTQ4nM1kIP8clO//9iK7DPekOJjv1zKoQZRQeJxqmmzSvhttr4Z3LkL1SyAKiPnOLfFb29Y4ybCXaHF6tQgftCFoKIFrS6C+YhbRZuxevTs1Ud7LuKgfqvEIbduARhwXmAVZu8XgkdMO0kz46R39PQ91lgL0ZK3s7xlK98N+5BjXsdtGocFirm3vA5fKdXGqHDbD7mmgceq8haAh8RIzerPeltkKu44LGumP6D44oJiqwC2BGRw1h8zFhYrZvpFctuTc3+gM3OoITUfyCPNluQr52Q4zpTe1J4pzVQhKYy1po2b6WklDmx8OGA2AkM/6AxNfeZXeMfb86eLdYLf08txU/d9q1rJrk+myRD7J3Gt+Lw5eJ7eOXoGj+77hg9BlKhoo7TiWhqw=
   on:
+    node: '0.12'
     tags: true
     all_branches: true
     repo: home-buddy/rest-buddy
